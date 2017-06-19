@@ -107,7 +107,9 @@ public class finalProject extends JComponent {
         // draw a black background
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, WIDTH, HEIGHT);
-
+        
+        g.setColor(Color.yellow);
+        g.fillRect(0, 0, 1, HEIGHT);
         // draw blocks in gray
         g.setColor(Color.GRAY);
         // use a for loop to go through the array of blocks :)
@@ -253,8 +255,8 @@ public class finalProject extends JComponent {
                 pointScore = startTime + scoreDelay;
                 score++;
             }
-
-            if (player.x <= 1 || player.y + player.height >= HEIGHT + 25) {
+            //if the player touches the back wall or goes under the blocks game ends
+            if (player.x <= 1 || player.y + player.height >= HEIGHT + 15) {
                 done = true;
 
             }
